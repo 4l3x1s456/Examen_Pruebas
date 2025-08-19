@@ -17,4 +17,4 @@ function calcWeightedGrade(items) {
     return Number(totalScore.toFixed(2));
 }
 
-module.exports = calcWeightedGrade;
+export default calcWeightedGrade;

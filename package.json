@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "npm test",
-    "test:coverage": "npm test:coverage",
-    "start": "npm start",
-    "lint": "npm run lint"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test:coverage": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage",
+    "start": "node index.js",
+    "lint": "eslint . --fix"
   },
   "keywords": [],
   "author": "",
@@ -23,5 +23,23 @@
   "dependencies": {
     "express": "^5.1.0"
   },
-  "type": "module"
+  "type": "module",
+  "jest": {
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    },
+    "testEnvironment": "node",
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/**/*.test.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "lines": 85,
+        "branches": 85,
+        "functions": 85,
+        "statements": 85
+      }
+    }
+  }
 }
