@@ -1,4 +1,4 @@
-const percentile = require('../percentile');
+import percentile from '../percentile.js';
 
 describe('percentile', () => {
   it('returns minimum for p=0', () => {

@@ -1,4 +1,4 @@
-const calcWeightedGrade = require('../calcWeightedGrade');
+import calcWeightedGrade from '../calcWeightedGrade.js';
 
 describe('calcWeightedGrade', () => {
   it('calculates weighted grade for reference case', () => {
